@@ -143,7 +143,7 @@ class MindappController < ApplicationController
     @runseq.status= 'F' #finish
     @runseq.stop= Time.now
     @runseq.save
-    refresh_to "/", :alert => "ขออภัย เกิดข้อผิดพลาดในรหัสการดำเนินงาน #{@xmain.id} #{@xvars['error']}"
+    refresh_to "/", :alert => "Sorry operation error #{@xmain.id} #{@xvars['error']}"
   end
   def run_output
     init_vars(params[:id])
