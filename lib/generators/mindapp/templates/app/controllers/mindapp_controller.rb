@@ -31,7 +31,7 @@ class MindappController < ApplicationController
     else
       js = ""
     end
-    render html: "<script>#{js}</script>"
+    render html: "<script>#{js}</script>".html_safe
   end
   def init
     module_code, code = params[:s].split(":")
