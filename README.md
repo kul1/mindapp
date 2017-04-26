@@ -33,9 +33,11 @@ app without ActiveRecord
 add mindapp to your Gemfile:
 
 For Development (most updated)
+
     gem 'mindapp', github:'kul1/mindapp'
 
-For Original 
+For Original  (may not update to work with current gems)
+
     gem 'mindapp'
        
 
