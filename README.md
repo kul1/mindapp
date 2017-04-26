@@ -11,7 +11,7 @@ I like to develop application using Ruby on Rails. I find that most of my projec
 
 These versions works for sure but others may do.
 
-* Ruby 2.4.0
+* Ruby 2.4.1
 * Rails 5.0.2
 * MongoDB 6
 * Freemind 1.0.1
