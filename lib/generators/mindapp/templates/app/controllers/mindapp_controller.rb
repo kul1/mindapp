@@ -223,8 +223,9 @@ class MindappController < ApplicationController
   end
   def end_action(next_runseq = nil)
     #    @runseq.status='F' unless @runseq_not_f
-    @xmain.xvars= @xvars
     @xmain.status= 'R' # running
+    @xvars['enter_user']['user'] = (@xvars['enter_user']['user']).permit(:email).to_h if @xvars['enter_user']['user'].class == ActionController::Parameters
+    @xmain.xvars= @xvars
     @xmain.save
     @runseq.status='F'
     @runseq.user= current_user
@@ -388,7 +389,7 @@ class MindappController < ApplicationController
                           :status=>'I', # init
                           :user=>current_user,
                           :xvars=> {
-                              :service_id=>service.id, :p=>params,
+                              :service_id=>service.id, :p=>params.permit(:s).to_h,
                               :id=>params[:id],
                               :user_id=>current_user.try(:id),
                               :custom_controller=>custom_controller,
