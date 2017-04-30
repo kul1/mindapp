@@ -224,7 +224,7 @@ class MindappController < ApplicationController
   def end_action(next_runseq = nil)
     #    @runseq.status='F' unless @runseq_not_f
     @xmain.status= 'R' # running
-    @xvars['enter_user']['user'] = (@xvars['enter_user']['user']).permit(:email).to_h if @xvars['enter_user']['user'].class == ActionController::Parameters
+    @xvars['enter_user']['user'] = (@xvars['enter_user']['user']).permit(:email).to_h if @xvars['enter_user'] && @xvars['enter_user']['user'].class == ActionController::Parameters
     @xmain.xvars= @xvars
     @xmain.save
     @runseq.status='F'
