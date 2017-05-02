@@ -71,7 +71,7 @@ now the application is ready, start it as any Rails application
 
 go to http://localhost:3000, click *Sign In* on the left menu, and enter user name `admin` and password `secret`
 
-![home.mm](http://songrit.googlecode.com/files/home.png)
+![home.mm](home.png)
 
 Now open file `app/mindapp/index.mm` using Freemind
 
